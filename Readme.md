@@ -34,7 +34,7 @@ python main.py -data PROTEINS -batch 128 -hid_dim 64 -dropout_att 0.1 -lr 0.01
 
 ### Hyperparameters to reproduce reported scores in the paper
 
-| Dataset | Batch Size | Hidden Dimension | Dropout | Learning rate (lr) |
+| Dataset | Batch Size | Hidden Dimension | Dropout | Learning rate |
 |---|---|---|---|---|
 | PROTEINS | 128 | 64 | 0.1| 0.01 |
 | FRANKENSTEIN | 128 | 32 | 0 | 0.001 |
