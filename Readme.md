@@ -4,7 +4,7 @@
 
 Source code for [AAAI 2020](https://aaai.org/Conferences/AAAI-20/) paper: [**ASAP: Adaptive Structure Aware Pooling for Learning Hierarchical Graph Representation**](https://arxiv.org/abs/1911.07979)
 
-![](https://github.com/ekagra-ranjan/ASAP-code/blob/master/clean2/ASAP-overview.png)
+![](./ASAP-overview.png)
 
 **Overview of ASAP:** *ASAP initially considers all possible local clusters with a fixed receptive field for a given input graph. It then computes the cluster membership of the nodes using an attention mechanism. These clusters are then scored using a GNN. Further, a fraction of the top scoring clusters are selected as nodes in the pooled graph and new edge weights are computed between neighboring clusters. Please refer to Section 4 of the paper for details.*
 
