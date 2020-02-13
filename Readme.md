@@ -48,7 +48,7 @@ Please cite the following paper if you found it useful in your work.
 
 ```bibtex
 @article{ranjan2019asap,
-  title={ASAP: Adaptive Structure Aware Pooling for Learning Hierarchical Graph Representations},
+  title={{ASAP}: Adaptive Structure Aware Pooling for Learning Hierarchical Graph Representations},
   author={Ranjan, Ekagra and Sanyal, Soumya and Talukdar, Partha Pratim},
   journal={arXiv preprint arXiv:1911.07979},
   year={2019}
