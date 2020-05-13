@@ -17,23 +17,31 @@ Source code for [AAAI 2020](https://aaai.org/Conferences/AAAI-20/) paper: [**ASA
 
 ### Dependencies
 
-- Compatible with PyTorch 1.5 and Python 3.x.
-To install Pytorch 1.5 use one of the following according to your CUDA version:
-```
-# CUDA 10.0
-pip install torch===1.5.0 -f https://download.pytorch.org/whl/torch_stable.html
+- Python 3.x
+- Pytorch (1.5)
+- Pytorch_Scatter (2.0.4)
+- Pytorch_Sparse (0.6.3)
+- Pytorch_Geometric (1.4.3)
 
-# CUDA 9.2
+Use the following commands to install the above version of dependency:
+```
+pip install torch==1.5.0+${CUDA} -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch-scatter==2.0.4+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.5.0.html
+pip install torch-sparse==0.6.3+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.5.0.html
+pip install torch-geometric==1.4.3
+```
+where where ${CUDA} should be replaced by either cpu, cu92, cu101 or cu102 depending on your PyTorch installation and CUDA version.
+
+E.g., if your CUDA version is 9.2 then run:
+```
 pip install torch==1.5.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
-
-# CPU only
-pip install torch==1.5.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch-scatter==2.0.4+cu92 -f https://pytorch-geometric.com/whl/torch-1.5.0.html
+pip install torch-sparse==0.6.3+cu92 -f https://pytorch-geometric.com/whl/torch-1.5.0.html
+pip install torch-geometric==1.4.3
+pip install numpy==1.18.4
+pip install scikit_learn==0.23.0
 ```
 
-- Other dependencies can be installed using `requirements.txt` using the following command:
-```
-pip install -r requirements.txt
-```
 
 ### Training a model from scratch
 
