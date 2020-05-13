@@ -16,7 +16,7 @@ from torch_sparse import transpose
 from torch_sparse import spspmm
 
 
-torch.set_num_threads(1)
+# torch.set_num_threads(1)
 
 
 def StAS(index_A, value_A, index_S, value_S, device, N, kN):
@@ -28,9 +28,11 @@ def StAS(index_A, value_A, index_S, value_S, device, N, kN):
 
     index_St, value_St = transpose(index_S, value_S, N, kN)
     index_B, value_B = coalesce(index_B, value_B, m=N, n=kN)
-    index_E, value_E = spspmm(index_St.cpu(), value_St.cpu(), index_B.cpu(), value_B.cpu(), kN, N, kN)
+    # index_E, value_E = spspmm(index_St.cpu(), value_St.cpu(), index_B.cpu(), value_B.cpu(), kN, N, kN)
+    index_E, value_E = spspmm(index_St, value_St, index_B, value_B, kN, N, kN)
 
-    return index_E.to(device), value_E.to(device)
+    # return index_E.to(device), value_E.to(device)
+    return index_E, value_E
 
 
 def graph_connectivity(device, perm, edge_index, edge_weight, score, ratio, batch, N):
@@ -39,8 +41,8 @@ def graph_connectivity(device, perm, edge_index, edge_weight, score, ratio, batc
     kN = perm.size(0)
     perm2 = perm.view(-1, 1)
     
-    # mask contains uint8 mask of edges which originate from perm (selected) nodes
-    mask = (edge_index[0]==perm2).sum(0, dtype=torch.uint8)
+    # mask contains bool mask of edges which originate from perm (selected) nodes
+    mask = (edge_index[0]==perm2).sum(0, dtype=torch.bool)
     
     # create the S
     S0 = edge_index[1][mask].view(1, -1)

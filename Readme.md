@@ -17,10 +17,20 @@ Source code for [AAAI 2020](https://aaai.org/Conferences/AAAI-20/) paper: [**ASA
 
 ### Dependencies
 
-- Compatible with PyTorch 1.0 and Python 3.x.
-- Dependencies can be installed using `requirements.txt`.
+- Compatible with PyTorch 1.5 and Python 3.x.
+To install Pytorch 1.5 use one of the following according to your CUDA version:
+```
+# CUDA 10.0
+pip install torch===1.5.0 -f https://download.pytorch.org/whl/torch_stable.html
 
-Can be installed using the following command:
+# CUDA 9.2
+pip install torch==1.5.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
+
+# CPU only
+pip install torch==1.5.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+- Other dependencies can be installed using `requirements.txt` using the following command:
 ```
 pip install -r requirements.txt
 ```
