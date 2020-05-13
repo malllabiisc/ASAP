@@ -38,8 +38,6 @@ pip install torch==1.5.0+cu92 -f https://download.pytorch.org/whl/torch_stable.h
 pip install torch-scatter==2.0.4+cu92 -f https://pytorch-geometric.com/whl/torch-1.5.0.html
 pip install torch-sparse==0.6.3+cu92 -f https://pytorch-geometric.com/whl/torch-1.5.0.html
 pip install torch-geometric==1.4.3
-pip install numpy==1.18.4
-pip install scikit_learn==0.23.0
 ```
 
 
