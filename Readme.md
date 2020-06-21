@@ -1,6 +1,6 @@
 ## ASAP: Adaptive Structure Aware Pooling for Learning Hierarchical Graph Representations
 
-[![Conference](http://img.shields.io/badge/AAAI-2020-4b44ce.svg)](https://aaai.org/Conferences/AAAI-20/) [![Paper](http://img.shields.io/badge/paper-arxiv.1911.07979-B31B1B.svg)](https://arxiv.org/abs/1911.07979)
+[![Conference](http://img.shields.io/badge/AAAI-2020-4b44ce.svg)](https://aaai.org/Conferences/AAAI-20/) [![Paper](http://img.shields.io/badge/Paper-arxiv.1911.07979-B31B1B.svg)](https://arxiv.org/abs/1911.07979) [![PyG](http://img.shields.io/badge/Example-Pytorch__Geometric_(PyG)-de5223.svg)](https://github.com/rusty1s/pytorch_geometric/blob/master/benchmark/kernel/asap.py)
 
 Source code for [AAAI 2020](https://aaai.org/Conferences/AAAI-20/) paper: [**ASAP: Adaptive Structure Aware Pooling for Learning Hierarchical Graph Representation**](https://arxiv.org/abs/1911.07979)
 
@@ -71,3 +71,6 @@ Please cite the following paper if you found it useful in your work.
 }
 ```
 For any clarification, comments, or suggestions please create an issue or contact [Ekagra](mailto:ekagra.ranjan@gmail.com).
+
+## Pytorch_Geometric
+Available at PyG: [Example](https://github.com/rusty1s/pytorch_geometric/blob/master/benchmark/kernel/asap.py)
