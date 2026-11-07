@@ -98,7 +98,7 @@ class Trainer(object):
 
 	# load model from path
 	def load_model(self, load_path):
-		state		= torch.load(load_path)
+		state		= torch.load(load_path, weights_only=True)
 		self.model.load_state_dict(state['state_dict'])
 		self.optimizer.load_state_dict(state['optimizer'])
 
